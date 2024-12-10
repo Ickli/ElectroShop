@@ -1,0 +1,17 @@
+<div class="right-layer-title">Покупка</div>
+<div id="buy-modal">
+    <div class="buy-modal-field">Название:</div>
+    <div class="buy-modal-value" id="buy-modal-name">{{ .Name }}</div>
+    <div class="buy-modal-field">Цена</div>
+    <div class="buy-modal-value" id="buy-modal-price">{{ .Price }}</div>
+    <form id="buy-modal-form">
+        <label for="cvv">CVV:</label><br>
+        <input type="text" name="cvv"/><br>
+        <label for="card_number">Номер карты:</label><br>
+        <input type="text" name="card_number"/><br>
+        <label for="expiration_date">Дата окончания (дд.мм.гггг):</label><br>
+        <input type="text" name="expiration_date"/><br>
+    </form>
+    <button id="buy-modal-submit">Купить</button>
+    <button id="buy-modal-exit">Выйти</button>
+</div>

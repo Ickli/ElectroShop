@@ -1,0 +1,14 @@
+{{ define "preview" }}
+<div class="preview">
+    <div class="preview-left">
+        <img src="{{ .ImgPath }}" >
+        {{ .Name }}
+    </div>
+    <div class="preview-right">
+        <p>{{ .ShortDesc }}</p>
+        <button class="preview-btn preview-btn-info" data-id="{{ .Id }}">Info</button>
+        <button class="preview-btn preview-btn-buy" style="margin-bottom: 5px;" data-id="{{ .Id }}">Buy</button>
+    </div>
+    <br style="clear:both;">
+</div>
+{{ end }} 

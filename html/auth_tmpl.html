@@ -1,0 +1,12 @@
+{{ define "auth" }}
+<h1 class="right-layer-title">Аккаунт</h1>
+<form id="auth-form" >
+    <label for="login" class="product-lower-left-label"><pre>Логин: </pre></label>
+    <input type="text" id="auth-login" class="product-lower-left-input" name="login"/><br>
+    <label for="password" class="product-lower-left-label"><pre>Пароль:</pre></label>
+    <input type="text" id="auth-password" name="password" class="product-lower-left-input"/>
+</form>
+<input type="button" id="auth-login-submit" value="Войти"/>
+<input type="button" id="auth-register" value="Создать"/>
+<input type="button" id="auth-logout" value="Выйти"/>
+{{ end }}

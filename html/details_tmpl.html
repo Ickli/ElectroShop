@@ -1,0 +1,49 @@
+{{ define "main" }}
+<div class="product-card">
+    <h3>Название</h3>
+    <h4>"{{ .Name }}"</h4>
+    <hr>
+    <h3>Стандарты</h3>
+    <p>{{ .Standards }}</p>
+    <hr>
+    <h3>Компания</h3>
+    <h4>{{ .Company }}</h4>
+    <hr>
+    <h3>Краткое описание</h3>
+    <p>{{ .ShortDesc }}</p>
+    <hr>
+    <h3>Цена, руб</h3>
+    <p>{{ .Price }}</p>
+    <hr>
+    <h3>Изображение</h3>
+    <div class="product-card-img-container">
+        <img src="{{ .ImgPath }}" class="product-card-img"/>
+    </div>
+    <hr>
+</div>
+<div class="product-lower-desc-cont">
+    <div class="product-desc">
+        <h3>Полное описание</h3>
+        <p class="product-desc-p">{{ .FullDesc }}</p>
+    </div>
+    <div class="product-lower">
+        <div class="product-lower-left">
+            <!--
+            <form id="auth-form" >
+                <label for="login" class="product-lower-left-label"><pre>Логин: </pre></label>
+                <input type="text" id="auth-login" class="product-lower-left-input" name="login"/><br>
+                <label for="password" class="product-lower-left-label"><pre>Пароль:</pre></label>
+                <input type="text" id="auth-password" name="password" class="product-lower-left-input"/>
+            </form>
+            <input type="button" id="auth-login-submit" value="Войти"/>
+            <input type="button" id="auth-register" value="Создать"/>
+            <input type="button" id="auth-logout" value="Выйти"/>
+            -->
+            {{ template "auth" . }}
+            <br><a class="right-layer-title preview-btn-buy" data-id="{{ .Id }}" style="font-size: 3rem; text-align: right;">Купить товар</a>
+        </div>
+        <div class="product-lower-right">
+        </div>
+    </div>
+</div>
+{{ end }} {{/* define "main" */}}
